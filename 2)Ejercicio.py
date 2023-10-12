@@ -16,7 +16,23 @@ for i in range(n):
     vector_auxiliar[i]=v[n-i-1]
 print("El vector invertido es",vector_auxiliar)"""
 
-#A(ciclo white)
+#A(ciclo while)
+n=int(input("Ingresar la cantidad de vector/lista: "))
+v=[0]*n
+i=0
+while i<n:
+    v[i]=int(input("Ingresar los elementos del vector: "))
+    i=i+1
+v_auxiliar=[0]*n
+i=0
+j=n-1
+while i<n:
+    v_auxiliar[i]=v[j]
+    i=i+1
+    j=j-1
+print("El vector invertido es:",v_auxiliar)
+
+#B(ciclo white)
 n=int(input("Ingresar la cantidad de vector/lista: "))
 v=[0]*n
 i=0
