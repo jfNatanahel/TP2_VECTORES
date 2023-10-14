@@ -13,5 +13,9 @@ j = 0  # Inicializa el índice en 0
 while j < b1:
     b[j] = int(input("Ingresar el valor: "))
     j = j + 1
-resultado=(((a[i==0]*10+b[j==1])*10+a[i==1])*10+b[j==0])
-print("El numero compuesto por el Vector A y Vector B es:",resultado)
+resultado=(((a[0]*10+b[1])*10+a[1])*10+b[0])
+resultado2=str(a[0])+str(b[1])+str(a[1])+str(b[0]) #los paso a cadena de caracteres y puedo realizar la concatenacion.
+
+
+print("1.El numero compuesto por el Vector A y Vector B es:",resultado)
+print("2.El numero compuesto por el Vector A y Vector B es:",resultado2)
