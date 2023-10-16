@@ -3,10 +3,18 @@ a=[None]*n
 for i in range (n):
     a[i]=int(input("Ingresar los elementos: "))
 print(a)
-for i in range(n):
-    for j in range(n,-i-1):
-        if a[j]<a[j+1]: #Buscar el mayor de la lista y colocalo en a[0]
-            aux=a[j]
-            a[j]=a[j+1]
-            a[j+1]=aux
-print("El mayor valor de la lista A es:",a[0])
+max_valor=a[0]
+for i in range(1,n):
+    if a[i]>max_valor:
+        max_valor=a[i]
+print("El numero mayor de la lista a es:",max_valor)
+b=0
+m=int(input("Ingresar la cantidad de numeros: "))
+b=[None]*n
+for j in range (m):
+    b[i]=int(input("Ingresar los elementos: "))
+    if b[i]==max_valor:
+        b=b+1
+        x=i
+if b==1:
+    print("El mayor de la lista A se encuentra en B, en la posicion:",x)
