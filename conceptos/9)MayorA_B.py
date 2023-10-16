@@ -12,9 +12,13 @@ b=0
 m=int(input("Ingresar la cantidad de numeros: "))
 b=[None]*n
 for j in range (m):
-    b[i]=int(input("Ingresar los elementos: "))
-    if b[i]==max_valor:
-        b=b+1
+    b[j]=int(input("Ingresar los elementos: "))
+c=0
+for j in range(m): 
+    if b[j]==max_valor:
+        c=c+1
         x=i
-if b==1:
+if c==1:
     print("El mayor de la lista A se encuentra en B, en la posicion:",x)
+else:
+    print("El mayor de la lista A no se encuentra en B")

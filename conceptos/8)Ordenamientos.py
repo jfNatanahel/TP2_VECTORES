@@ -40,7 +40,7 @@ for i in range (n):
     x[i]=int(input("Ingresar los elementos: "))
     print(x[i])
     v=x[i]
-    j=i-1
+    j=i-1 #avanzamos hacia atras
     print(j)
     while j>=0 and x[j]>v:
         x[j+1]=x[j] #mover a la derecha
