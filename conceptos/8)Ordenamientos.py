@@ -36,13 +36,14 @@ print(x)"""
 #exacta para insertar el numero en el lugra correspondiente.
 n=int(input("Ingresar la cantidad de numeros: "))
 x=[None]*n
-j=0
-for i in range (n):
+for i in range (n): 
     x[i]=int(input("Ingresar los elementos: "))
+    print(x[i])
     v=x[i]
-    j=j-1
+    j=i-1
+    print(j)
     while j>=0 and x[j]>v:
-        x[j+1]=x[j]
+        x[j+1]=x[j] #mover a la derecha
         j=j-1
-    x[j+1]=v
+    x[j+1]=v #mover a la izquierda
 print(x)
