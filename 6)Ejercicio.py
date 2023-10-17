@@ -1,3 +1,4 @@
+#Dadas dos listas de caracteres de m y n elementos. Determinar que caracteres de la lista 1 se encuentran en la lista 2
 m=int(input("Ingresar el tamaño de la LISTA1: "))
 lista1=[None]*m
 for i in range(m):
@@ -10,5 +11,4 @@ for i in range(m): #recorrer la primer lista
     for j in range(n): #ciclo anidado, recorrer la segunda lista
         if lista1[i]==lista2[j]:
             print(f"Carater {lista2[j]} LISTA 2 se encuentra en la LISTA 1")
-#El programa puede tener un pequeño error, si existen dos elementos iguales se va a imprimir dos veces
-#aun asi sigue siendo optimo....
+
