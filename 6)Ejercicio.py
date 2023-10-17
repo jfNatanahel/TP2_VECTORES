@@ -1,3 +1,4 @@
+#Dadas dos listas de caracteres de m y n elementos. Determinar que caracteres de la lista 1 se encuentran en la lista 2
 m=int(input("Ingresar el tamaño de la LISTA1: "))
 lista1=[None]*m
 for i in range(m):
