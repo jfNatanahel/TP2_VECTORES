@@ -9,36 +9,16 @@ alumnos=[None]*n
 notas=[None]*n
 for i in range(n):
     alumnos[i]=str(input("Ingresar nombre del Alumno (primer letra en MAYUSCULA): "))
-    notas[j]=int(input("Ingresar las notas del {alumnos[i]}: "))
-    v=notas[i]
-    j=i-1 #avanzamos hacia atras
-    print(j)
-    while j>=0 and notas[j]>v:
-        notas[j+1]=notas[j] #mover a la derecha
+    notas[i]=int(input(f"Ingresar las notas del {alumnos[i]}: "))
+#METODO DE ORDENAMIENTO 3)INSERCION:
+    copia_nota=notas[i]
+    copia_alumnos=alumnos[i]
+    j=i-1
+    while j>=0 and notas[j]>copia_nota:
+        notas[j+1]=notas[j]
+        alumnos[j+1]=alumnos[j]
         j=j-1
-    notas[j+1]=v #mover a la izquierda
-print(notas)
-"""
-i=0
-for i in range(n):
-    if notas<=60:
-        i=i+1
-    else:
-        for k in range(i):
-
-"""
-"""n=int(input("Ingresar la cantidad de numeros: "))
-x=[None]*n
-for i in range (n): 
-    x[i]=int(input("Ingresar los elementos: "))
-    print(x[i])
-   #####ALGORITMO######
-    v=x[i]
-    j=i-1 #avanzamos hacia atras
-    print(j)
-    while j>=0 and x[j]>v:
-        x[j+1]=x[j] #mover a la derecha
-        j=j-1
-    x[j+1]=v #mover a la izquierda
-print(x)
-"""
+    notas[j+1]=copia_nota
+    alumnos[j+1]=copia_alumnos
+    
+        
