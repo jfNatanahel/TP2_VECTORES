@@ -1,0 +1,24 @@
+Por supuesto, aquí está el código con números que representan las posiciones en la lista:
+
+v = x[1]: Almacenamos el número actual en la variable v (el segundo número en la lista).
+
+j = 0: Establecemos j en la posición anterior a la actual.
+
+Comenzamos un bucle while para avanzar hacia atrás y comparar el número actual (v) con los elementos anteriores en la lista.
+
+Verificamos dos condiciones:
+
+j >= 0: Asegura que no hemos llegado al inicio de la lista.
+x[0] > v: Verifica si el primer elemento en la posición j (posición 0) es mayor que el valor actual v.
+Si ambas condiciones se cumplen, movemos el número en la posición j (posición 0) a la derecha para abrir espacio para v. Esto se hace con la línea x[1] = x[0].
+
+Reducimos j en 1 con j = -1 para seguir comparando con el siguiente elemento anterior en la lista (que no existe en este caso).
+
+Como no hay elementos anteriores para comparar, el bucle while no se ejecuta.
+
+Cuando dejamos de ejecutar el bucle while, sabemos que hemos encontrado la ubicación correcta para v en la lista ordenada.
+
+Finalmente, asignamos v a x[0] (la posición donde v se estaba moviendo) para mover v a su ubicación correcta en la lista ordenada.
+
+Este es un ejemplo simplificado para el primer elemento en la lista, donde no hay elementos anteriores para comparar. 
+El proceso se repite para los elementos siguientes en la lista, y el algoritmo de inserción coloca cada elemento en su posición correcta en la lista ordenada.
