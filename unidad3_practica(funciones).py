@@ -12,3 +12,4 @@ print(t)
 while t>=0 and t<=len(s):
   print ("Las letras u en el texto ",s, " se encuentran en las posiciones:", t)
   t= s.find("u",t+1,len(s))
+
