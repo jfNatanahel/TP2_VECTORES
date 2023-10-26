@@ -14,7 +14,7 @@ propietario, para su verificacion.
 
 """
 
-sistema_patente=set()
+sistema_patente=[]
 reclamos=[]
 republica_argentina="RA"
 continuar=True
@@ -28,14 +28,11 @@ while continuar:
     R=republica_argentina[0]
     A=republica_argentina[:-1]
     patente=str(R+E+D+L+A)
-    #Vector resultante
-    if patente in sistema_patente:
-        reclamos.append((apellido,dni,patente))
-    else:
-        sistema_patente.add((apellido,dni,patente))
+    sistema_patente.append((apellido,dni,patente))
     respuesta=input("Desea continuar? SI/NO: ").lower()
     if respuesta!="si":
         continuar=False
-sistema_patente=list(sistema_patente)
-print("El vector resultante con sus patentes: ",sistema_patente)
-print("El vector de reclamos: ",reclamos)
+print("El sistema de patentes principal:",sistema_patente)
+sistema_patente=set()
+print("El sistema de patentes sin duplicados: ",sistema_patente)
+#Como armar un vector con los que estan duplicados poniendo su apellido,dni,y la patente repetida
