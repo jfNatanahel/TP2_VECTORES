@@ -16,6 +16,7 @@ propietario, para su verificacion.
 
 sistema_patente=[]
 reclamos=[]
+reclamos2=[]
 republica_argentina="RA"
 continuar=True
 while continuar:
@@ -26,13 +27,20 @@ while continuar:
     L=apellido[-1] #Ultima letra del apellido
     D=str(dni)[-3:] #Los 3 ultimos digitos del dni
     R=republica_argentina[0]
-    A=republica_argentina[:-1]
+    A=republica_argentina[1]
     patente=str(R+E+D+L+A)
-    sistema_patente.append((apellido,dni,patente))
+    patente_duplicada = False
+    for item in sistema_patente:
+        if item[2] == patente:
+            patente_duplicada = True
+            reclamos.append((apellido, dni, patente))
+            break
+    if not patente_duplicada:
+        sistema_patente.append((apellido, dni, patente))
     respuesta=input("Desea continuar? SI/NO: ").lower()
     if respuesta!="si":
         continuar=False
+#Sistema de patentes principal
 print("El sistema de patentes principal:",sistema_patente)
-sistema_patente=set()
-print("El sistema de patentes sin duplicados: ",sistema_patente)
-#Como armar un vector con los que estan duplicados poniendo su apellido,dni,y la patente repetida
+print("El sistema de reclamos",reclamos)
+print("El sistema de reclamos",reclamos2)
