@@ -1,3 +1,3 @@
-mi_lista = [1, 2, 3, 4, 5]
-cantidad_elementos = len(mi_lista)
-print(cantidad_elementos)
+p="20231001,00000145, Microsoft Word, cpacheco,"
+long=len(p)
+print(long)
