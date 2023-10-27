@@ -7,26 +7,16 @@ c)Atender un paciente con suma urgencia y arreglar y mostrar la lista.
 d)Determinar cuantos pacientes faltan para ser atendidos un paciente x.
 """
 lista_espera=[]
-continuar=True
-while continuar:
-    paciente=input("Ingresar el nombre del paciente: ")
+#continuar=True
+while True:
+    paciente=input("Ingresar el nombre del paciente(o fin para terminar): ")
     lista_espera.append(paciente)
-    doctor=True
-    while doctor:
-        recepcion=input("Desea atender a un paciente? Si: Ingresar nombre: ").lower()
-        if recepcion=="si":
-            if recepcion in lista_espera:
-                lista_espera.remove(recepcion)
-                print(f"El paciente {recepcion} ha sido atendido")
-            else:
-                print(f"el paciente{recepcion} no se encuentra en la lista de espera")
+    if paciente=="fin":
+        break
+    atender=input("Ingresar el paciente que desea atender: ")
+    for posicion in paciente:
+        if paciente in atender:
+            paciente=lista_espera.pop(paciente)
         else:
-            doctor=False
-    respuesta=input("¿Desea continuar?S/N: ").lower()
-    if respuesta!="si":
-        continuar=False
-print("Lista de pacientes",lista_espera)
-x=input("Ingresar el paciente a determinar cuanto falta para ser atendido: ")
-if x in lista_espera:
-    index=lista_espera.index(x)
-    print(f"El paciente {x} falta ser atendido en la posicion {index}")
+            print("El paciente no esta en la lista de espera")
+print(lista_espera)
