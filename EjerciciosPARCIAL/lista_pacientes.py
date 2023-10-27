@@ -10,13 +10,26 @@ lista_espera=[]
 #continuar=True
 while True:
     paciente=input("Ingresar el nombre del paciente(o fin para terminar): ")
-    lista_espera.append(paciente)
     if paciente=="fin":
         break
-    atender=input("Ingresar el paciente que desea atender: ")
-    for posicion in paciente:
-        if paciente in atender:
-            paciente=lista_espera.pop(paciente)
+    lista_espera.append(paciente)
+    continuar=True
+    while continuar:
+        respuesta=input("¿Desea atender a un paciente? S/N: ").lower()
+        if respuesta=="si":
+            atender=input("Ingrese el nombre del paciente anteder: ")
+            if atender in lista_espera:
+                lista_espera.remove(atender)
+                print(f"El paciente {atender} ha sido atendido y eliminado de la lista")
+                continuar=False
         else:
-            print("El paciente no esta en la lista de espera")
-print(lista_espera)
+            continuar=False
+print("Lista de pacientes en espera:",lista_espera)
+x=input("Ingresar el paciente saber cuanto le falta para atender: ")
+for i, paciente in enumerate(lista_espera):
+    #enumarte para obtener tanto el indice como el valor
+    if x==paciente:
+        print(f"El paciente {x} le falta por atender: {i}")
+        break
+else:
+    print(f"El paciente {x} no se encuentra en la lista de espera")
