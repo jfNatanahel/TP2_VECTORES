@@ -1,3 +1,4 @@
+#Se puede usar para numeros etc.
 def insertar_elementos_ordenados(lista_a, lista_b):
     for elemento in lista_b:
         index=0

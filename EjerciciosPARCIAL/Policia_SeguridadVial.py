@@ -39,9 +39,7 @@ while continuar:
     n_patente=input("Ingresar el numero de la patente: ")
     dni=int(input("Ingresar el DNI: "))
     tipo_infraccion=input("Ingresar el tipo de infraccion (ALCO),(CEDU),(CINTU),(REVE),(SEGU),CEL: ").lower()
-    procedimiento.append(n_patente)
-    procedimiento.append(dni)
-    procedimiento.append(tipo_infraccion)
+    procedimiento.append((n_patente,dni,tipo_infraccion))
     if tipo_infraccion=="alco":
         alco+=1
     elif tipo_infraccion=="cedu":

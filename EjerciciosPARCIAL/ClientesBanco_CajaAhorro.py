@@ -40,7 +40,7 @@ while True:
     dni_cliente=int(input("Ingresar el dni del cliente(0 para terminar): "))
     if dni_cliente==0:
         break
-    saldo_extraer=floa(input(f"Ingresar el saldo a extrar del dni {dni_cliente}: "))
+    saldo_extraer=float(input(f"Ingresar el saldo a extrar del dni {dni_cliente}: "))
 #primero buscamos la posicion del Dni.
     posicion=dni_clientes_banco.index(dni_cliente)
 #Una vez encontrado buscamos el saldo disponible.

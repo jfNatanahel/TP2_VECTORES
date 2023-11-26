@@ -1,18 +1,16 @@
 #Dado un vector de K elementos que contiene palabras, realizar un programa para eliminar las palabras
 #repetidas. El vector resultante debe ser un vector de m elemenntos no repetidos.
-n=int(input("Ingresar el tamaño del vector: "))
+"""n=int(input("Ingresar el tamaño del vector: "))
 v=[None]*n
 for i in range(n):
     v[i]=input("Ingresar palabra")
-########ALGORITMO ELIMINAR ELEMENTOS REPETIDOS########
-"""
-¿CUAL ES LA IDEA DE LOS DOS CICLOS WHILE?
+########ALGORITMO ELIMINAR ELEMENTOS REPETIDOS########"""
+"""¿CUAL ES LA IDEA DE LOS DOS CICLOS WHILE?
 La idea es que i representa el índice del elemento actual que estamos comparando, y j se utiliza
 para rastrear el índice del siguiente elemento en el vector que queremos comparar con el elemento
 en la posición i. Esto asegura que estemos comparando cada elemento con los elementos posteriores 
-en el vector para detectar duplicados.
-"""
-i=0
+en el vector para detectar duplicados."""
+"""i=0
 while i<=n-2: #1er ciclo para "i"
 #¿Por qué i<=n-2?
 #primer elemento hasta el penúltimo elemento (hasta n-2).Esto se hace para seleccionar
@@ -29,4 +27,5 @@ while i<=n-2: #1er ciclo para "i"
 print("Lista sin repetidos:")
 for i in range(n):
     print(v[i])
-print("Vector resultante es:",v[:n])
+print("Vector resultante es:",v[:n])"""
+#RESOLVIENDO EL PROBLEMA CON FUNCIONES
